@@ -27,6 +27,7 @@ function loaded( data ) {
   }
   else{
     //we got all of the followers, start sending messages
+    console.log("got messages: " + myFollowers);
     postmethod();
   }
 };
@@ -37,7 +38,7 @@ function postmethod(){
   console.log(start);  //Debug
   console.log(myFollowers);
   if(start == true){
-    for (var i = 0; i<myFollowers.length; i++){
+    for (var i = 0; i<60; i++){
       console.log("Looping...");  //Debug
       var current = myFollowers[i];
       $.ajax({
